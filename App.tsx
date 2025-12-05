@@ -75,6 +75,7 @@ const PARTNERS = [
 ];
 
 const BUSINESS_INTRO_URL = "https://jmocoder.github.io/iq_reits_intro/";
+const CLASSROOM_URL = "https://jmocoder.github.io/iq_knowledge_share/";
 
 // --- Utility Components ---
 
@@ -224,12 +225,21 @@ const App: React.FC = () => {
             ))}
             <div className="w-px h-6 bg-slate-300 mx-2" />
             <a 
+              href={CLASSROOM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 text-sm font-semibold text-slate-700 hover:text-purple-700 transition-all flex items-center gap-1.5 group"
+            >
+              颀阔课堂
+              <ExternalLink size={14} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
+            </a>
+            <a 
               href={BUSINESS_INTRO_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 text-sm font-semibold text-slate-700 hover:text-purple-700 transition-all flex items-center gap-1.5 group"
             >
-              业务展示
+              业务介绍
               <ExternalLink size={14} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
             </a>
             <a 
@@ -279,12 +289,23 @@ const App: React.FC = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.6 }}
+                href={CLASSROOM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-purple-700 border-b border-slate-100 pb-4 flex items-center gap-2"
+              >
+                颀阔课堂 <ExternalLink size={18} />
+              </motion.a>
+              <motion.a 
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.7 }}
                 href={BUSINESS_INTRO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-bold text-purple-700 border-b border-slate-100 pb-4 flex items-center gap-2"
               >
-                业务展示 <ExternalLink size={18} />
+                业务介绍 <ExternalLink size={18} />
               </motion.a>
             </nav>
           </motion.div>
@@ -340,7 +361,7 @@ const App: React.FC = () => {
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <span className="relative flex items-center gap-3">
-                  业务展示
+                  业务介绍
                   <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                 </span>
               </a>
