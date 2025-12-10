@@ -201,7 +201,7 @@ const App: React.FC = () => {
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-2">
+          <nav className="hidden lg:flex items-center gap-1">
             {NAV_ITEMS.map((item) => (
               <a 
                 key={item.href} 
@@ -209,7 +209,7 @@ const App: React.FC = () => {
                 onClick={(e) => handleNavClick(e, item.href)}
                 onMouseEnter={() => setHoveredNav(item.href)}
                 onMouseLeave={() => setHoveredNav(null)}
-                className="relative px-4 py-2 text-sm font-medium text-slate-600 hover:text-purple-700 transition-colors rounded-full"
+                className="relative px-3 py-2 text-sm font-medium text-slate-600 hover:text-purple-700 transition-colors rounded-full whitespace-nowrap"
               >
                 {hoveredNav === item.href && (
                   <motion.div
@@ -229,7 +229,7 @@ const App: React.FC = () => {
               href={REITS_MARKET_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 text-sm font-semibold text-slate-700 hover:text-purple-700 transition-all flex items-center gap-1.5 group"
+              className="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-purple-700 transition-all flex items-center gap-1.5 group whitespace-nowrap"
             >
               REITs行情
               <ExternalLink size={14} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
@@ -238,7 +238,7 @@ const App: React.FC = () => {
               href={CLASSROOM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 text-sm font-semibold text-slate-700 hover:text-purple-700 transition-all flex items-center gap-1.5 group"
+              className="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-purple-700 transition-all flex items-center gap-1.5 group whitespace-nowrap"
             >
               颀阔课堂
               <ExternalLink size={14} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
@@ -247,7 +247,7 @@ const App: React.FC = () => {
               href={BUSINESS_INTRO_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 text-sm font-semibold text-slate-700 hover:text-purple-700 transition-all flex items-center gap-1.5 group"
+              className="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-purple-700 transition-all flex items-center gap-1.5 group whitespace-nowrap"
             >
               业务介绍
               <ExternalLink size={14} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
@@ -255,7 +255,7 @@ const App: React.FC = () => {
             <a 
               href="#contact"
               onClick={(e) => handleNavClick(e, '#contact')}
-              className="ml-2 bg-slate-900 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-purple-600 hover:scale-105 active:scale-95 transition-all shadow-lg shadow-slate-900/20"
+              className="ml-2 bg-slate-900 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-purple-600 hover:scale-105 active:scale-95 transition-all shadow-lg shadow-slate-900/20 whitespace-nowrap"
             >
               联系我们
             </a>
@@ -263,7 +263,7 @@ const App: React.FC = () => {
 
           {/* Mobile Menu Toggle */}
           <button 
-            className="md:hidden p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors"
+            className="lg:hidden p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -278,7 +278,7 @@ const App: React.FC = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl pt-24 px-6 md:hidden"
+            className="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl pt-24 px-6 lg:hidden"
           >
             <nav className="flex flex-col gap-6 text-xl">
               {NAV_ITEMS.map((item, i) => (
